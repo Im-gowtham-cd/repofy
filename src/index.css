@@ -1,0 +1,34 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@font-face{
+  font-family:'Luck';
+  src:url('./assets/font/LuckiestGuy.ttf');
+}
+
+@font-face{
+  font-family:'Biz';
+  src:url('./assets/font/Bizantheum.otf');
+}
+
+body {
+  margin: 0;
+  display: flex;
+  /* place-items: center; */
+  min-height: 100vh;
+  background-color: #00ED64;
+}
+
+nav {
+  display: flex;
+  /* border: 1px solid black; */
+  height: 10vh;
+  width: 100vw;
+  align-items: center;
+}
+
+h1{
+  font-family: 'Biz';
+}
