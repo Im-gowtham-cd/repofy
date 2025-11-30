@@ -19,12 +19,58 @@
   src: url('./assets/font/Bizantheum.otf');
 }
 
+@font-face{
+  font-family:'Santa';
+  src:url('./assets/font/Santa\ Unicorn.ttf');
+}
+
+@font-face{
+  font-family:'Valen';
+  src:url('./assets/font/Wonderful\ Valentine.ttf');
+}
+
+
 body {
   margin: 0;
   display: flex;
   /* place-items: center; */
   min-height: 100vh;
   background-color: var(--fg);
+  cursor: none;
+}
+
+#cursor {
+  list-style: none; 
+  position: fixed;
+  top: 0;
+  /* left: 10px; */
+  width: 45px;
+  height: 45px;
+  background-color: transparent;
+  border-radius: 50%;
+  /* filter: blur(10px); */
+  /* border: 1.2px solid var(--bg); */
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  box-shadow: 0 0 0 1px var(--bg);
+  opacity: 0;
+  transition: opacity 300ms ease;
+}
+
+.cursor-dot {
+  width: 15px;
+  /* box-shadow: 0 0 4px 1px var(--fg); */
+  /* border: 0.2px solid var(--fg); */
+  height: 15px;
+  background-color: var(--bg);
+  border-radius: 50%;
+}
+
+body:hover #cursor {
+  opacity: 1;
 }
 
 nav {
@@ -96,6 +142,7 @@ nav {
 
 .nav-list {
   list-style: none;
+  cursor:auto;
   display: flex;
   height: 7.5vh;
   width: 0%;
@@ -107,13 +154,15 @@ nav {
   gap: 30px;
 }
 
-.nav-list li {
-  font-family: 'Biz';
+.nav-list a {
+  font-family: 'Valen';
+  text-decoration: none;
   font-size: 20px;
-  font-weight: 800;
+  cursor: none;
+  /* font-weight: 600; */
   color: var(--fg);
 }
 
 nav:hover .nav-list {
-  width: 50%;
+  width: 40%;
 }
