@@ -3,14 +3,20 @@
   padding: 0;
 }
 
-@font-face{
-  font-family:'Luck';
-  src:url('./assets/font/LuckiestGuy.ttf');
+:root {
+  --bg: #00ED64;
+  --fg: #000000;
+  --bgw: #f5f5f5;
 }
 
-@font-face{
-  font-family:'Biz';
-  src:url('./assets/font/Bizantheum.otf');
+@font-face {
+  font-family: 'Luck';
+  src: url('./assets/font/LuckiestGuy.ttf');
+}
+
+@font-face {
+  font-family: 'Biz';
+  src: url('./assets/font/Bizantheum.otf');
 }
 
 body {
@@ -18,17 +24,96 @@ body {
   display: flex;
   /* place-items: center; */
   min-height: 100vh;
-  background-color: #00ED64;
+  background-color: var(--fg);
 }
 
 nav {
   display: flex;
-  /* border: 1px solid black; */
-  height: 10vh;
+  /* border: 1px solid rgb(255, 255, 255); */
+  height: 15vh;
   width: 100vw;
+  transition: all 0.3s ease-in-out;
   align-items: center;
+  gap: 20px;
+  justify-content: center;
+  /* position: relative; */
+  /* background: var(--bgw); */
 }
 
-h1{
+.nav-title {
   font-family: 'Biz';
+  font-size: 35px;
+  font-weight: 800;
+  position: relative;
+  color: var(--fg);
+  background-color: var(--bg);
+  padding: 10px 20px;
+  /* box-shadow: 4px -3px 0px 2px var(--fg); */
+}
+
+.nav-title::after {
+  content: '';
+  position: absolute;
+  /* top: 7%; */
+  left: 5%;
+  width: 135px;
+  height: 53px;
+  background-color: var(--bgw);
+  z-index: -1;
+}
+
+.nav-title::before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: -5%;
+  width: 25px;
+  height: 23px;
+  background-color: var(--bgw);
+  z-index: -1;
+}
+
+#nav-hover {
+  /* font-family: ''; */
+  /* font-size: 20px; */
+  font-weight: 800;
+  /* position: absolute; */
+  /* top: 10px; */
+  height: 40px;
+  width: 35px;
+  font-size: 22px;
+  border-radius: 100px;
+  /* left: 55%; */
+  display: flex;
+  align-items: center;
+  /* padding: 40px; */
+  justify-content: center;
+  background-color: var(--bg);
+  color: var(--bgw);
+  padding: 1px 4px;
+  color: var(--fg);
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  height: 7.5vh;
+  width: 0%;
+  overflow: hidden;
+  background-color: var(--bg);
+  justify-content: center;
+  align-items: center;
+  transition: width 0.5s ease-in-out;
+  gap: 30px;
+}
+
+.nav-list li {
+  font-family: 'Biz';
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--fg);
+}
+
+nav:hover .nav-list {
+  width: 50%;
 }
