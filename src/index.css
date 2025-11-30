@@ -7,6 +7,10 @@
   --bg: #00ED64;
   --fg: #000000;
   --bgw: #f5f5f5;
+  --p: #c300ff;
+  --pi : #ff00f7;
+  --bpi: #ff00f728;
+  --bp: #d000ff1f;
 }
 
 @font-face {
@@ -19,16 +23,25 @@
   src: url('./assets/font/Bizantheum.otf');
 }
 
-@font-face{
-  font-family:'Santa';
-  src:url('./assets/font/Santa\ Unicorn.ttf');
+@font-face {
+  font-family: 'Santa';
+  src: url('./assets/font/Santa\ Unicorn.ttf');
 }
 
-@font-face{
-  font-family:'Valen';
-  src:url('./assets/font/Wonderful\ Valentine.ttf');
+@font-face {
+  font-family: 'Valen';
+  src: url('./assets/font/Wonderful\ Valentine.ttf');
 }
 
+@font-face {
+  font-family: 'Ais';
+  src: url('./assets/font/Aisling-FreeDemo.otf');
+}
+
+@font-face {
+  font-family: 'Str';
+  src: url('./assets/font/StretchPro.ttf');
+}
 
 body {
   margin: 0;
@@ -40,7 +53,7 @@ body {
 }
 
 #cursor {
-  list-style: none; 
+  list-style: none;
   position: fixed;
   top: 0;
   /* left: 10px; */
@@ -55,7 +68,7 @@ body {
   align-items: center;
   justify-content: center;
   pointer-events: none;
-  box-shadow: 0 0 0 1px var(--bg);
+  box-shadow: 0 0 0 2px var(--bgw);
   opacity: 0;
   transition: opacity 300ms ease;
 }
@@ -65,7 +78,7 @@ body {
   /* box-shadow: 0 0 4px 1px var(--fg); */
   /* border: 0.2px solid var(--fg); */
   height: 15px;
-  background-color: var(--bg);
+  background-color: var(--bgw);
   border-radius: 50%;
 }
 
@@ -142,7 +155,7 @@ nav {
 
 .nav-list {
   list-style: none;
-  cursor:auto;
+  cursor: auto;
   display: flex;
   height: 7.5vh;
   width: 0%;
@@ -164,5 +177,134 @@ nav {
 }
 
 nav:hover .nav-list {
-  width: 40%;
+  width: 35%;
+}
+
+.HeroSection {
+  height: 80vh;
+  margin-left: 2.5%;
+  width: 95%;
+  background-color: var(--bg);
+  display: flex;
+  /* align-items: center;
+  justify-content: center; */
+  /* box-shadow: 0 0 10px 5px var(--bgw); */
+  position: relative;
+  /* border: 1px solid var(--bg); */
+}
+
+.HeroSection::after {
+  position: absolute;
+  content: '';
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  left: 1%;
+  top: 2%;
+  background: var(--bgw);
+}
+
+.HeroSection::before {
+  position: absolute;
+  content: '';
+  height: 10%;
+  width: 5%;
+  z-index: -1;
+  left: -1%;
+  top: -2%;
+  background: var(--bgw);
+}
+
+.hero{
+  list-style: none;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: center;
+  gap: 20px;
+  /* border: 1px solid black; */
+  position: relative;
+}
+
+.hero li:nth-child(1){
+  font-family: 'Santa';
+  font-size: 150px;
+  margin-left: 30px;
+  font-weight: 600;
+  color: var(--fg);
+}
+
+.hero li:nth-child(2){
+  margin-left: 31px;
+  font-family: 'Santa';
+  font-size: 80px;
+  font-weight: 600;
+  color: var(--p);
+  background: var(--bp);
+  border: 3px solid var(--p);
+  padding: 20px;
+  border-radius: 35px;
+  width: fit-content;
+
+}
+
+.hero li:nth-child(3){
+  margin-left: 51px;
+  font-family: 'Santa';
+  font-size: 110px;
+  font-weight: 600;
+  color: var(--fg);
+}
+
+.getstarted{
+  /* border: 1px solid black; */
+  list-style: none;
+  display: flex;
+  background: var(--fg);
+  margin-left: 51px;
+  align-items: center;
+  width: fit-content;
+  height: 15%;
+}
+
+.getstarted li:nth-child(1){
+  font-size: 30px;
+  padding: 20px;
+  font-family: 'Santa';
+  color: var(--bg);
+}
+
+#arrowright{
+  font-size: 35px;
+  padding: 20px 20px 20px 20px;
+  font-family: 'Santa';
+  color: var(--bg);
+}
+
+.getstarted:hover{
+  border-radius: 50px;
+}
+
+.getstarted:hover #arrowright{
+  color: var(--bgw);
+  transform: rotate(-40Deg);
+}
+
+.highlight{
+  background-color: var(--bpi);
+  transform: translateX(10px);
+  color: var(--pi);
+  padding: 10px 20px;
+  border: 3px solid var(--pi);
+  border-radius: 40px;
+}
+
+.heroimage{
+  height: 350px;
+  width: 500px;
+  position: absolute;
+  top: 5px;
+  right: 50px;
 }
