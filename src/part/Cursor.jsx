@@ -4,8 +4,8 @@ export default function Cursor() {
     useEffect(() => {
         const cursor = document.getElementById("cursor");
         const mouse = e => {
-            const x = e.clientX;
-            const y = e.clientY;
+            const x = e.clientX - cursor.offsetWidth / 2;
+            const y = e.clientY - cursor.offsetHeight / 2;
             cursor.style.transform = `translate(${x}px, ${y}px)`;
         };
 
