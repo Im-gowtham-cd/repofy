@@ -160,6 +160,7 @@ nav {
   height: 7.5vh;
   width: 0%;
   overflow: hidden;
+  min-width: 0;
   background-color: var(--bg);
   justify-content: center;
   align-items: center;
@@ -287,8 +288,15 @@ nav:hover .nav-list {
   border-radius: 50px;
 }
 
+.getstarted:hover li:nth-child(1){
+  transition: all 0.3s ease-in-out;
+  color: var(--bgw);
+}
+
 .getstarted:hover #arrowright{
   color: var(--bgw);
+  transition: all 0.3s ease-in-out;
+  scale: 1.5;
   transform: rotate(-40Deg);
 }
 
@@ -307,4 +315,68 @@ nav:hover .nav-list {
   position: absolute;
   top: 5px;
   right: 50px;
+}
+
+.CardContainer{
+  height: 50vh;
+  width: 100%;
+  margin-top: 5%;
+  /* border: 1px solid var(--bg); */
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.card{
+  list-style: none;
+  height: 80%;
+  margin-left: 3%;
+  width: 20.8%;
+  display: flex;
+  border: 5px solid;
+  /* border-radius: 10px; */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transform: rotate(-10Deg);
+  gap: 20px;
+}
+
+.card i:nth-child(1){
+  font-size: 100px;
+  font-family: 'Santa';
+  font-weight: 600;
+  color: var(--bg);
+}
+
+.card li:nth-child(2){
+  font-size: 32px;
+  font-family: 'Biz';
+  font-weight: 600;
+  color: var(--bg);
+}
+
+.card li:nth-child(3){
+  font-size: 14px;
+  font-family: 'Santa';
+  font-weight: 600;
+  color: var(--bg);
+  text-align: center;
+}
+
+.card:hover {
+  /* border-color: var(--fg); */
+  scale: 1.06;
+  transform: rotate(0Deg);
+  /* transition: all 0.3s ease-in-out; */
+}
+
+.CardContainer:hover .card{
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  opacity: 0.5;
+}
+
+.CardContainer .card:hover{
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
