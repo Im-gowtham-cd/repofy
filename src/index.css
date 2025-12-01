@@ -43,6 +43,16 @@
   src: url('./assets/font/StretchPro.ttf');
 }
 
+@font-face {
+  font-family: 'Pro';
+  src: url('./assets/font/Pronell.otf');
+}
+
+@font-face {
+  font-family: 'Milk';
+  src: url('./assets/font/Milker.otf');
+}
+
 body {
   margin: 0;
   display: flex;
@@ -352,7 +362,7 @@ nav:hover .nav-list {
 .card li:nth-child(2){
   font-size: 32px;
   font-family: 'Biz';
-  font-weight: 600;
+  font-weight: 800;
   color: var(--bg);
 }
 
@@ -379,4 +389,91 @@ nav:hover .nav-list {
 .CardContainer .card:hover{
   opacity: 1;
   transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.about{
+  height: 80vh;
+  width: 95%;
+  margin-top: 5%;
+  margin-left: 2.5%;
+  /* border: 1px solid var(--bg); */
+  background-color: transparent;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about::after{
+  position: absolute;
+  content: '';
+  height: 50%;
+  width: 50%;
+  z-index: -1;
+  left: 0%;
+  top: 7%;
+  background: var(--bgw);
+}
+
+
+.about::before{
+  position: absolute;
+  content: '';
+  height: 50%;
+  width: 50%;
+  z-index: -1;
+  right: 0%;
+  bottom: 7%;
+  background: var(--bgw);
+}
+
+.aboutcontent{
+  list-style: none;
+  height: 80%;
+  /* margin-left: 3%; */
+  width: 98%;
+  display: flex;
+  background-color: var(--bg);
+  /* border-radius: 10px; */
+  flex-direction: column;
+  /* align-items: center; */
+  /* justify-content: center; */
+  /* transform: rotate(-10Deg); */
+  gap: 40px;
+}
+
+.aboutcontent li:nth-child(1){
+  font-size: 82px;
+  margin-top: 30px;
+  margin-left: 30px;
+  font-family: 'Milk';
+  font-weight: 800;
+  color: var(--fg);
+}
+
+.aboutcontent li:nth-child(2){
+  font-size: 40px;
+  margin-top: 10px;
+  margin-left: 30px;
+  font-family: 'Santa';
+  font-weight: 800;
+  color: var(--fg);
+}
+
+.aboutcontent li:nth-child(3){
+  font-size: 40px;
+  /* margin-top: 30px; */
+  margin-left: 30px;
+  font-family: 'Santa';
+  font-weight: 800;
+  color: var(--fg);
+}
+
+.aboutcontent li:nth-child(4){
+  font-size: 40px;
+  /* margin-top: 30px; */
+  margin-left: 30px;
+  font-family: 'Santa';
+  font-weight: 800;
+  color: var(--fg);
 }
