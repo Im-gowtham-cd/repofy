@@ -14,24 +14,24 @@ export default function Card() {
         },
         {
             color: '--p',
-            name: 'FormatFix™',
+            name: 'Format Fix™',
             des: "Automatically cleans up formatting to match academic rules.",
             icon: 'bx bx-slider-alt',
         },
         {
-            color: '--pi',
-            name: 'ControlHub™',
-            des: "Your space to manage, store, and track all your reports.",
+            color: '--pin',
+            name: 'Control Hub™',
+            des: "Your space to manage all your reports.",
             icon: 'bx bx-category',
         },
     ];
 
     const cards = card.map((c) => {
         return (
-            <ul className="card" style={{ borderColor: `var(${c.color})` }}>
-                <i className={c.icon} style={{ color: `var(${c.color})` }}></i>
-                <li style={{ color: `var(${c.color})` }}>{c.name}</li>
-                <li style={{ color: `var(${c.color})` }}>{c.des}</li>
+            <ul className="card" style={{ backgroundColor: `var(${c.color})` }}>
+                <i className={c.icon} style={{ color: `var(--fg)` }}></i>
+                <li style={{ color: `var(--fg)` }}>{c.name}</li>
+                <li style={{ color: `var(--fg)` }}>{c.des}</li>
             </ul>
         )
     })

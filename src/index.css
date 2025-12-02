@@ -11,6 +11,7 @@
   --pi : #ff00f7;
   --bpi: #ff00f728;
   --bp: #d000ff1f;
+  --pin: #ffd900;
 }
 
 @font-face {
@@ -53,8 +54,14 @@
   src: url('./assets/font/Milker.otf');
 }
 
+@font-face {
+  font-family: 'Com';
+  src: url('./assets/font/Comero\ Baroque.ttf');
+}
+
 body {
   margin: 0;
+  letter-spacing: 2px;
   display: flex;
   /* place-items: center; */
   min-height: 100vh;
@@ -347,9 +354,30 @@ nav:hover .nav-list {
   /* border-radius: 10px; */
   flex-direction: column;
   align-items: center;
+  position: relative;
   justify-content: center;
-  transform: rotate(-10Deg);
+  /* transform: rotate(-10Deg); */
   gap: 20px;
+}
+
+.card::after{
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 50px;
+  background-color: var(--fg);
+  top: 0;
+  left: 30px;
+}
+
+.card::before{
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 50px;
+  background-color: var(--fg);
+  top: 0;
+  left: 60px;
 }
 
 .card i:nth-child(1){
@@ -361,14 +389,14 @@ nav:hover .nav-list {
 
 .card li:nth-child(2){
   font-size: 32px;
-  font-family: 'Biz';
+  font-family: 'Pro';
   font-weight: 800;
   color: var(--bg);
 }
 
 .card li:nth-child(3){
-  font-size: 14px;
-  font-family: 'Santa';
+  font-size: 16px;
+  font-family: 'Valen';
   font-weight: 600;
   color: var(--bg);
   text-align: center;
@@ -381,7 +409,7 @@ nav:hover .nav-list {
   /* transition: all 0.3s ease-in-out; */
 }
 
-.CardContainer:hover .card{
+/* .CardContainer:hover .card{
   transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
   opacity: 0.5;
 }
@@ -389,7 +417,7 @@ nav:hover .nav-list {
 .CardContainer .card:hover{
   opacity: 1;
   transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
-}
+} */
 
 .about{
   height: 80vh;
@@ -452,28 +480,28 @@ nav:hover .nav-list {
 }
 
 .aboutcontent li:nth-child(2){
-  font-size: 40px;
+  font-size: 50px;
   margin-top: 10px;
   margin-left: 30px;
-  font-family: 'Santa';
-  font-weight: 800;
+  font-family: 'Com';
+  /* font-weight: 800; */
   color: var(--fg);
 }
 
 .aboutcontent li:nth-child(3){
-  font-size: 40px;
+  font-size: 50px;
   /* margin-top: 30px; */
   margin-left: 30px;
-  font-family: 'Santa';
-  font-weight: 800;
+  font-family: 'Com';
+  /* font-weight: 800; */
   color: var(--fg);
 }
 
 .aboutcontent li:nth-child(4){
-  font-size: 40px;
+  font-size: 50px;
   /* margin-top: 30px; */
   margin-left: 30px;
-  font-family: 'Santa';
-  font-weight: 800;
+  font-family: 'Com';
+  /* font-weight: 800; */
   color: var(--fg);
 }
