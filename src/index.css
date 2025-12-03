@@ -59,6 +59,11 @@
   src: url('./assets/font/Comero\ Baroque.ttf');
 }
 
+@font-face {
+  font-family: 'Pat';
+  src: url('./assets/font/Paterna.otf');
+}
+
 body {
   margin: 0;
   letter-spacing: 2px;
@@ -263,7 +268,7 @@ nav:hover .nav-list {
   background: var(--bp);
   border: 3px solid var(--p);
   padding: 20px;
-  border-radius: 35px;
+  /* border-radius: 35px; */
   width: fit-content;
 
 }
@@ -323,7 +328,7 @@ nav:hover .nav-list {
   color: var(--pi);
   padding: 10px 20px;
   border: 3px solid var(--pi);
-  border-radius: 40px;
+  /* border-radius: 40px; */
 }
 
 .heroimage{
@@ -480,28 +485,28 @@ nav:hover .nav-list {
 }
 
 .aboutcontent li:nth-child(2){
-  font-size: 50px;
+  font-size: 25px;
   margin-top: 10px;
   margin-left: 30px;
-  font-family: 'Com';
-  /* font-weight: 800; */
+  font-family: 'Santa';
+  font-weight: 800;
   color: var(--fg);
 }
 
 .aboutcontent li:nth-child(3){
-  font-size: 50px;
+  font-size: 45px;
   /* margin-top: 30px; */
   margin-left: 30px;
-  font-family: 'Com';
+  font-family: 'Santa';
   /* font-weight: 800; */
   color: var(--fg);
 }
 
 .aboutcontent li:nth-child(4){
-  font-size: 50px;
+  font-size: 25px;
   /* margin-top: 30px; */
   margin-left: 30px;
-  font-family: 'Com';
-  /* font-weight: 800; */
+  font-family: 'Santa';
+  font-weight: 800;
   color: var(--fg);
 }
