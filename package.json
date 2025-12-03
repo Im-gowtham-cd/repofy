@@ -4,6 +4,8 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "keerthika": "vite",
+    "gotamu": "vite",
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
