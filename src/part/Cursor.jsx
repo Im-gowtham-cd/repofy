@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 
-export default function Cursor() {
+export default function Cursor({ isGetStartedHovered, isCard }) {
     useEffect(() => {
         const cursor = document.getElementById("cursor");
         const mouse = e => {
@@ -16,11 +16,44 @@ export default function Cursor() {
         };
     }, []);
 
+    useEffect(() => {
+        const cursor = document.getElementById("cursor");
+        const cursorDot = document.querySelector(".cursor-dot");
+        if (isGetStartedHovered) {
+            cursorDot.style.display = "none";
+            cursor.style.height = "100px";
+            cursor.style.width = "300px";
+            // cursor.style.transform = "translate(-50%, -50%)";
+            cursor.style.border = "3px solid var(--bgw)";
+            cursor.style.borderRadius = "100px";
+            // cursor.style.backgroundColor = "var(--bgw)";
+            cursor.style.transition = "height 0.2s ease, width 0.2s ease, border-radius 0.2s ease";
+        }
+        else if (isCard) {
+            cursor.style.height = "350px";
+            cursor.style.width = "350px";
+            // cursor.style.transform = "translate(-50%, -50%)";
+            cursor.style.border = "3px solid var(--bgw)";
+            cursor.style.borderRadius = "0px";
+            // cursor.style.backgroundColor = "var(--bgw)";
+            cursor.style.transition = "height 0.2s ease, width 0.2s ease, border-radius 0.2s ease";
+        } else {
+            cursor.style.height = "45px";
+            cursorDot.style.display = "block";
+            cursor.style.border = "1px solid var(--bgw)";
+            cursor.style.width = "45px";
+            cursor.style.borderRadius = "50%";
+            cursor.style.backgroundColor = "transparent";
+        }
+    }, [isGetStartedHovered, isCard]);
+
     return (
         <>
             <ul id="cursor">
                 <li className="cursor-dot"></li>
             </ul>
+
+            {/* <p id="cursorname">Repofy</p> */}
         </>
     )
 }
