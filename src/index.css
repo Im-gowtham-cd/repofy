@@ -74,6 +74,30 @@ body {
   cursor: none;
 }
 
+#cursorname {
+  position: fixed;
+  top: 0;
+  /* left: 10px; */
+  width: 70px;
+  height: 25px;
+  background-color: var(--bg);
+  /* border-radius: 50%; */
+  /* filter: blur(10px); */
+  /* border: 1.2px solid var(--bg); */
+  z-index: 9999;
+  color: var(--fg);
+  font-family: 'Pat';
+  font-size: 14px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  box-shadow: 0 0 0 2px var(--fg);
+  opacity: 0;
+  transition: opacity 300ms ease;
+}
+
 #cursor {
   list-style: none;
   position: fixed;
@@ -81,7 +105,7 @@ body {
   /* left: 10px; */
   width: 45px;
   height: 45px;
-  background-color: transparent;
+  /* background-color: transparent; */
   border-radius: 50%;
   /* filter: blur(10px); */
   /* border: 1.2px solid var(--bg); */
@@ -105,6 +129,17 @@ body {
 }
 
 body:hover #cursor {
+  opacity: 1;
+}
+
+.getstarted:hover ~  #cursor{
+  height: 200px;
+  width: 200px;
+  background-color: var(--bgw);
+}
+
+
+body:hover #cursorname {
   opacity: 1;
 }
 

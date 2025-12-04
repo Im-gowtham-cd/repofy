@@ -1,6 +1,6 @@
 import i1 from '../assets/image/Report.png'
 
-export default function Hero() {
+export default function Hero({ setIsGetStartedHovered }) {
     return (
         <>
             <div className="HeroSection">
@@ -8,7 +8,11 @@ export default function Hero() {
                     <li>The Intelligent</li>
                     <li>Report Checker</li>
                     <li>for Students <mark className="highlight"> & Institutions</mark></li>
-                    <ul className="getstarted">
+                    <ul
+                        className="getstarted"
+                        onMouseEnter={() => setIsGetStartedHovered(true)}
+                        onMouseLeave={() => setIsGetStartedHovered(false)}
+                    >
                         <li>Get Started</li>
                         <i class='bxr  bx-arrow-right-stroke-circle' id='arrowright'/>
                     </ul>

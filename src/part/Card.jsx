@@ -1,4 +1,4 @@
-export default function Card() {
+export default function Card({ setIsCard }) {
     const card = [
         {
             color: '--bg',
@@ -28,7 +28,7 @@ export default function Card() {
 
     const cards = card.map((c) => {
         return (
-            <ul className="card" style={{ backgroundColor: `var(${c.color})` }}>
+            <ul className="card" style={{ backgroundColor: `var(${c.color})` }} onMouseEnter={() => setIsCard(true)} onMouseLeave={() => setIsCard(false)}>
                 <i className={c.icon} style={{ color: `var(--fg)` }}></i>
                 <li style={{ color: `var(--fg)` }}>{c.name}</li>
                 <li style={{ color: `var(--fg)` }}>{c.des}</li>
