@@ -19,10 +19,15 @@ export default function Cursor({ isGetStartedHovered, isCard }) {
     useEffect(() => {
         const cursor = document.getElementById("cursor");
         const cursorDot = document.querySelector(".cursor-dot");
+        const btn = document.querySelector(".getstarted");
+        const card = document.querySelector(".card");
         if (isGetStartedHovered) {
+            const rect = btn.getBoundingClientRect();
             cursorDot.style.display = "none";
-            cursor.style.height = "100px";
-            cursor.style.width = "300px";
+            // cursor.style.height = "100px";
+            // cursor.style.width = "300px";
+            cursor.style.width = rect.width + "px";
+            cursor.style.height = rect.height + "px";
             // cursor.style.transform = "translate(-50%, -50%)";
             cursor.style.border = "3px solid var(--bgw)";
             cursor.style.borderRadius = "100px";
@@ -30,8 +35,9 @@ export default function Cursor({ isGetStartedHovered, isCard }) {
             cursor.style.transition = "height 0.2s ease, width 0.2s ease, border-radius 0.2s ease";
         }
         else if (isCard) {
-            cursor.style.height = "350px";
-            cursor.style.width = "350px";
+            const rect = card.getBoundingClientRect();
+            cursor.style.height = rect.height + "px";
+            cursor.style.width = rect.width + "px";
             // cursor.style.transform = "translate(-50%, -50%)";
             cursor.style.border = "3px solid var(--bgw)";
             cursor.style.borderRadius = "0px";
