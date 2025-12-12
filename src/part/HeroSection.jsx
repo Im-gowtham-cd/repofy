@@ -1,5 +1,4 @@
 import i1 from '../assets/image/Report.png'
-
 export default function Hero({ setIsGetStartedHovered }) {
     return (
         <>
@@ -13,7 +12,7 @@ export default function Hero({ setIsGetStartedHovered }) {
                         onMouseEnter={() => setIsGetStartedHovered(true)}
                         onMouseLeave={() => setIsGetStartedHovered(false)}
                     >
-                        <li>Get Started</li>
+                        <li><a href="../../application/dist_electron/Repofy.exe" download="Repofy.exe">Download Repofy</a></li>
                         <i class='bxr  bx-arrow-right-stroke-circle' id='arrowright'/>
                     </ul>
                     <img src={i1} alt="" className='heroimage'/>

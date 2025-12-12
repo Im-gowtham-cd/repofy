@@ -4,6 +4,7 @@ import Cursor from './part/Cursor.jsx'
 import HeroSection from './part/HeroSection.jsx'
 import Card from './part/Card.jsx'
 import About from './part/About.jsx'
+// import Download from './part/Download.jsx'
 
 export default function App() {
   const [isGetStartedHovered, setIsGetStartedHovered] = useState(false);
@@ -12,6 +13,7 @@ export default function App() {
     <>
       <Nav />
       <HeroSection setIsGetStartedHovered={setIsGetStartedHovered} />
+      {/* <Download /> */}
       <Card setIsCard={setIsCard} />
       <About />
       <Cursor isGetStartedHovered={isGetStartedHovered} isCard={isCard} />
