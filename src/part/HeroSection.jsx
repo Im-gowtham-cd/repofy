@@ -12,7 +12,7 @@ export default function Hero({ setIsGetStartedHovered }) {
                         onMouseEnter={() => setIsGetStartedHovered(true)}
                         onMouseLeave={() => setIsGetStartedHovered(false)}
                     >
-                        <li><a href="../../application/dist_electron/Repofy.exe" download="Repofy.exe">Download Repofy</a></li>
+                        <li><a href="https://drive.google.com/file/d/1hD4Mn_vPAcbIQ5hBO_Kfuz2XA5zb8zQU/view?usp=drive_link" download="Repofy.exe">Download Repofy</a></li>
                         <i class='bxr  bx-arrow-right-stroke-circle' id='arrowright'/>
                     </ul>
                     <img src={i1} alt="" className='heroimage'/>
