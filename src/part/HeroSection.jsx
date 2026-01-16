@@ -5,7 +5,7 @@ export default function Hero({ setIsGetStartedHovered }) {
             <div className="HeroSection">
                 <ul className="hero">
                     <li>The Intelligent</li>
-                    {/*<li>Report Checker</li>*/}
+                    <li>Report Checker</li>
                     <li>for Students <mark className="highlight"> & Institutions</mark></li>
                     <ul
                         className="getstarted"
